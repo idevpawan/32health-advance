@@ -1,50 +1,79 @@
-# React + TypeScript + Vite
+# 32Health Advance Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for managing user information with features like editing user details, liking users, and deleting users.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** - A JavaScript library for building user interfaces
+- **TypeScript** - For type-safe code
+- **Vite** - Next Generation Frontend Tooling
+- **Ant Design** - A design system for enterprise-level products
+- **Tailwind CSS** - A utility-first CSS framework
 
-## Expanding the ESLint configuration
+## Why Vite?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project uses Vite instead of Create React App (CRA) because:
 
-- Configure the top-level `parserOptions` property like this:
+- CRA is now deprecated
+- Vite offers faster development server start
+- Better hot module replacement (HMR)
+- Optimized build process
+- Modern architecture using native ES modules
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 16.0 or higher)
+- npm or yarn or pnpm
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/idevpawan/32health-advance.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Navigate to the project directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd 32health-advance
 ```
+
+3. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+4. Start the development server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+5. Open your browser and visit `http://localhost:5173`
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+## Features
+
+- View user cards with avatar and contact information
+- Edit user details through a modal form
+- Like/unlike users
+- Delete users
+- Responsive design for various screen sizes
+- Form validation for user inputs
